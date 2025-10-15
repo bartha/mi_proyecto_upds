@@ -1,15 +1,13 @@
-/* PASO 2 del PDF: Estilos Base y Flexbox para PC */
-
-/* Reset global - Esto asegura que todos los navegadores se vean igual */
+/* Estilos generales (image_a808a6.png) */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Crucial para que los anchos se calculen bien */
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3f4f6; /* Color de fondo suave */
+    background-color: #f3f4f6;
     color: #333;
     text-align: center;
 }
@@ -27,63 +25,52 @@ nav a {
     font-weight: bold;
 }
 
-/* Aplicando Flexbox para las tarjetas (Vista PC) */
+/* Reglas Flexbox (image_a805f9.png) */
 .contenedor {
-    display: flex; /* CLAVE 1: Pone las tarjetas una al lado de otra */
-    justify-content: space-around; /* Distribuye el espacio entre ellas [cite: 104] */
-    margin: 40px auto; 
-    max-width: 1200px;
+    display: flex; /* Flexbox: pone en fila */
+    justify-content: space-around;
+    margin: 40px; /* Nota: Lo cambiamos a '40px auto' para centrar */
+    max-width: 1200px; /* Añadido para mejor centrado, no está en la imagen */
+    margin: 40px auto;
 }
 
 .card {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    width: 30%; /* Cada tarjeta ocupa el 30% del espacio */
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra para efecto de elevación [cite: 93] */
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Efecto de elevación */
     text-align: left;
 }
 
 footer {
-    background-color: #0078ff; 
+    background-color: #0078ff;
     color: white;
     padding: 10px;
     margin-top: 20px;
 }
-/* PASO 3 del PDF: Media Query para Tablets y Celulares (max-width: 768px) */
-
-/* @media (max-width: 768px) significa: "Si la pantalla tiene menos de 768 píxeles, aplica estas reglas." [cite: 124, 125] */
+/* Para pantallas pequeñas */
 @media (max-width: 768px) {
-    
     .contenedor {
-        /* CLAVE: Cambia la dirección de Fila a Columna [cite: 111, 126] */
         flex-direction: column;
-        align-items: center; /* Centra los elementos */
-        margin: 20px;
+        align-items: center;
     }
-
+    
     .card {
-        width: 80%; /* Las tarjetas se hacen más anchas para ocupar el espacio del celular [cite: 115] */
+        width: 80%;
         margin-bottom: 20px;
     }
 
     nav a {
-        display: block; /* Los enlaces de navegación se ponen uno debajo del otro [cite: 119] */
+        display: block;
         margin: 10px 0;
     }
 }
-/* PASO 4 del PDF: Usar Grid para reorganizar las tarjetas (min-width: 1024px) */
-
-/* Si la pantalla es GRANDE (1024px o más), aplica estas reglas */
+/* En pantallas grandes */
 @media (min-width: 1024px) {
     .contenedor {
-        display: grid; /* CLAVE: Cambia el método de organización a Grid */
-        grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño (1fr) */
-        gap: 20px; /* Agrega 20px de espacio entre las columnas y filas */
-    }
-
-    /* En Grid, ya no necesitamos la propiedad width: 30% en .card, se elimina o se ajusta */
-    .card {
-        width: auto; 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
 }
