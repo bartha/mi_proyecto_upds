@@ -1,4 +1,4 @@
-// Paso 2: Crear tus primeras variables usando datos de Jhoel Bartha
+// Paso 2: Crear tus primeras variables datos de Jhoel Bartha
 
 // 'const' (Constante): El dato NO cambia. Ideal para nombre completo o un correo principal.
 const nombreCompleto = "Jhoel Bartha";
@@ -224,3 +224,18 @@ eliminarProducto(2); // Eliminamos el Mouse Inalámbrico
 
 // E. Mostramos la lista final (READ)
 mostrarProductos();
+
+// Paso 3: Conectar y comprobar
+console.log("¡Hola desde JavaScript!"); 
+
+// Paso 4: Seleccionar elementos del DOM
+const titulo = document.getElementById("titulo"); 
+const descripcion = document.getElementById("descripcion"); 
+const botonColor = document.getElementById("botonColor"); 
+const botonTexto = document.getElementById("botonTexto"); 
+const entrada = document.getElementById("entrada"); 
+const saludo = document.getElementById("saludo"); 
+
+// Paso 5: Cambiar texto y estilo
+titulo.textContent = "Bienvenido al mundo del DOM!"; // Debería cambiar el texto
+descripcion.style.color = "gray"; // Debería cambiar el color del párrafo

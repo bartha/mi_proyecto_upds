@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación del DOM y Eventos</title>
+    
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body id="cuerpo_documento">
+    
+    <header>
+        <h1 id="titulo">Control Dinámico de la Web</h1>
+        <p id="descripcion">Explora la capacidad de JavaScript para transformar la interfaz.</p>
+    </header>
+
+    <main>
+        <p>Selecciona una opción o ingresa tu nombre para ver la magia del DOM:</p>
+
+        <section class="controles">
+            <button id="botonColor" class="btn primary">Cambiar Fondo</button>
+            
+            <button id="botonTexto" class="btn secondary">Nuevo Título</button>
+        </section>
+
+        <section class="interaccion-usuario">
+            <input type="text" id="entrada" placeholder="Escribe tu nombre aquí..." aria-label="Ingresa tu nombre">
+            
+            <p id="saludo" class="mensaje"></p>
+        </section>
+
+    </main>
+
+    <footer>
+       <p>Desarrollado por [jhoelbartha/Equipo] &copy; 2025 - Actividad de Manipulación del DOM.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
